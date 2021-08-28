@@ -1,0 +1,11 @@
+@import '../../styles/main';
+
+.button {
+  @include button();
+}
+
+.default {
+  background-color: $theme-colorAccent !important;
+  border-color: $theme-colorAccent !important;
+  color: #fff !important;
+}

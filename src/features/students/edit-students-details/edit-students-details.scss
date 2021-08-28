@@ -1,0 +1,39 @@
+@import '../../../styles/main';
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.list-element {
+  width: 45%;
+  margin-top: 10px;
+  padding-left: 5px;
+
+  button:focus {
+    box-shadow: none;
+  }
+}
+
+.group-input{
+  width:80%;
+}
+
+.button{
+  @include button();
+}
+
+.exclude-btn {
+  background-color: $theme-colorDark !important;
+  border-color: $theme-colorDark !important;
+}
+
+.error{
+  padding-top:5px;
+  color:red;
+}
+
+.loader-centered {
+  display: block !important;
+  margin: 20px auto;
+}

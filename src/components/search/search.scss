@@ -1,0 +1,25 @@
+@import '../../styles/main';
+
+.search {
+  position: relative;
+  display: inline-block;
+  line-height: 1.6;
+
+  &Input {
+    @include input;
+    position: relative;
+    padding: 5px 5px 5px 32px;
+    transition: all .1s;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 7px map-get($colors, nonAccent-color);
+    }
+  }
+
+    &Icon {
+      position: absolute;
+      left: 7px;
+      top: 7px;
+      fill: $theme-colorDark;
+    }
+}

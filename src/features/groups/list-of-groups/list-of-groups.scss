@@ -1,0 +1,72 @@
+@import '../../../styles/main';
+
+.calendar-input{
+  border-color: map-get($colors, textAccentN1-color) !important;
+  width: 18%;
+  .form-control {
+    max-width: 50%;
+  }
+}
+
+.calendar-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px map-get($colors, textAccentN1-color);
+  border-color: map-get($colors, textAccentN1-color);
+}
+
+.scale {
+  transition: .3s ease;
+  padding-top: 3px;
+  &:hover {
+    transform: scale(1.4);
+    padding-top: 5px;
+  }
+}
+
+.category {
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.7;
+    transition: .4s;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -15px;
+    top: 10px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    width: 8px;
+    height: 8px;
+    transform: rotateZ(45deg);
+    transition: .3s;
+  }
+
+  &-sorted {
+    &::after {
+      transform: rotateZ(225deg);
+      top: 5px;
+    }
+  }
+}
+
+.change-rows{
+  margin: 0 10px;
+  width: fit-content !important;
+}
+
+.label-for-select{
+  padding: .375rem .75rem;
+  margin-bottom: 0 !important;
+}
+
+.paginate{
+  margin: auto !important;
+}
+
+.left-add-btn{margin-right: 3px;}
+

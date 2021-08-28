@@ -1,0 +1,149 @@
+{
+  "name": "what",
+  "version": "1.0.0",
+  "description": "see README.md to find more information",
+  "license": "MIT",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "test": "jest --collectCoverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ita-social-projects/what-front.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ita-social-projects/what-front/issues"
+  },
+  "homepage": "https://github.com/ita-social-projects/what-front",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@testing-library/dom": "^8.0.0",
+    "@testing-library/jest-dom": "5.13.0",
+    "@testing-library/react": "^11.2.7",
+    "autoprefixer": "^10.0.1",
+    "babel-jest": "^27.0.2",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.2",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "css-minimizer-webpack-plugin": "^3.0.1",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^27.0.4",
+    "mini-css-extract-plugin": "^1.3.1",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.5",
+    "postcss-import": "^13.0.0",
+    "postcss-loader": "^4.0.4",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^10.0.0",
+    "purgecss-webpack-plugin": "^3.1.3",
+    "react-refresh": "^0.9.0",
+    "sass": "^1.28.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.0.3",
+    "thread-loader": "^3.0.1",
+    "webpack": "^5.3.2",
+    "webpack-bundle-analyzer": "^4.1.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.1",
+    "jest": "^27.0.4",
+    "lodash.clonedeep": "^4.5.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-icons": "^3.11.0",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
+    "xlsx": "^0.16.9",
+    "yup": "^0.31.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.js"
+    ],
+    "testEnvironment": "jsdom",
+    "moduleDirectories": [
+      ".",
+      "src",
+      "src/utils",
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)$": "<rootDir>/src/$1",
+      "^@utils(.*)$": [
+        "<rootDir>/src/utils/$1"
+      ],
+      "^@assets(.*)$": [
+        "<rootDir>/src/assets/$1"
+      ],
+      "^@styles(.*)$": [
+        "<rootDir>/src/styles/$1"
+      ],
+      "^@shared(.*)$": [
+        "<rootDir>/src/shared/$1"
+      ],
+      "^@models(.*)$": [
+        "<rootDir>/src/models/$1"
+      ],
+      "^@screens(.*)$": [
+        "<rootDir>/src/screens/$1"
+      ],
+      "^@features(.*)$": [
+        "<rootDir>/src/features/$1"
+      ],
+      "^@components(.*)$": [
+        "<rootDir>/src/components/$1"
+      ],
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    }
+  }
+}
